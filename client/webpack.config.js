@@ -3,8 +3,8 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { GenerateSW, InjectManifest } = require('workbox-webpack-plugin');
 const path = require('path');
-// const is_prod = process.env.NODE_ENV === 'production';
-const is_prod = true;
+const is_prod = process.env.NODE_ENV === 'production';
+// const is_prod = true;
 
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
