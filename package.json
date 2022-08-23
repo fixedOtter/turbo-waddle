@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "cd",
-    "build": "",
-    "install": "",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "concurrently \"cd server && node server.js\" \"cd client && npm run build\"",
+    "server": "cd server && npm run server",
+    "build": "cd client && npm run build",
+    "install": "echo \"Please run 'npm i' manually in client, server, and root directory. There seems to be a problem with running 'npm i' concurrently. Thank you <3\"",
     "client": ""
   },
   "keywords": [],

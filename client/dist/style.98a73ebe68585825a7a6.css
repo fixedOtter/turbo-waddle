@@ -27,7 +27,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color:#455394;
+  color:#0b97f9;
   font-size: 22px;
   font-weight: 550;
   letter-spacing: 0.9px;
@@ -209,3 +209,4 @@ h1 {
     font-size: 18px;
   }
 }
+
