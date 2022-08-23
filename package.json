@@ -8,7 +8,7 @@
     "start": "concurrently \"cd server && node server.js\" \"cd client && npm run build\"",
     "server": "cd server && npm run server",
     "build": "cd client && npm run build",
-    "install": "echo \"Please run 'npm i' manually in client, server, and root directory. There seems to be a problem with running 'npm i' concurrently. Thank you <3\"",
+    "install": "concurrently \"cd client && npm i\" \"npm i\"",
     "client": ""
   },
   "keywords": [],
