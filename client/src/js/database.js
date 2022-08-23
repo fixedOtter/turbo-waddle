@@ -20,7 +20,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore('turboWaddle');
 
   // the actual req putting data into the database
-  const request = store.put({content: content});
+  const request = await store.put({content: content});
 
   // logging our successes
   request ? console.log(`Data saved boi!`) : console.error(`Oopsie Woopsie! Uwu We made a fucky wucky!! A wittle fucko boingo! The code monkeys at our headquarters are working VEWY HAWD to fix this!`)
@@ -36,8 +36,9 @@ export const getDb = async () => {
   // actual request getting everything from the database
   const data = store.getAll();
 
-  // return result
-  return await data;
+  // awaiting data and returning data or null
+  const result = await data;
+  return result ? result : null;
 };
 
 initdb();

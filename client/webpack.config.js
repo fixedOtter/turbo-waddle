@@ -35,11 +35,12 @@ if (is_prod) plugins.push(...[
     inject: true,
     theme_color: '#F78DA7',
     fingerprints: false, // prevents creating the image hash thing
+    display: 'standalone',
     icons: [
       {
-        src: path.resolve('src/images/penguin-logo.jpg'), // FIXME
+        src: path.resolve('src/images/penguin-logo.jpg'),
         destination: path.join('assets/icons'),
-        sizes: [96, 128, 192, 256, 384, 512], // multiple sizes,
+        sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
         ios: true
       },
     ]
