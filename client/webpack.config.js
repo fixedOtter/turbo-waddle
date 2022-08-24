@@ -23,15 +23,16 @@ const plugins = [
 if (is_prod) plugins.push(...[
   new GenerateSW(),
   new InjectManifest({
-    swSrc: path.resolve('src/js/src-sw.js')
+    swSrc: './src/js/src-sw.js',
+    swDest: 'src-sw.js'
   }),
   new WebpackPwaManifest({
     name: 'Turbo Waddle Text Editor',
     short_name: 'turbowaddle',
     description: 'Incredible Text Editor',
     background_color: '#F78DA7',
-    start_url: './',
-    publicPath: './',
+    start_url: '/',
+    publicPath: '/',
     inject: true,
     theme_color: '#F78DA7',
     fingerprints: false, // prevents creating the image hash thing
