@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "cd server && node server.js",
+    "start": "node server/server.js",
     "server": "cd server && npm run server",
-    "build": "cd client && npm run build",
-    "install": "cd server && npm i",
+    "build:client": "cd client && npm i && npm run build",
+    "build:server": "cd server && npm i",
+    "build": "npm build:client && npm build:server",
+    "install": "npm build:server && cd client && npm i",
     "client": ""
   },
   "keywords": [],
