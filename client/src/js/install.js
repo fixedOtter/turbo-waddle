@@ -10,7 +10,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 // TODO: Implement a click event handler on the `butInstall` element
 butInstall.addEventListener('click', async () => {
   if (laterInstall !== null) {
-    laterInstall.prompt();
+    laterInstall();
     const { outcome } = await laterInstall.userChoice;
     if (outcome === 'accepted') {
         laterInstall = null;

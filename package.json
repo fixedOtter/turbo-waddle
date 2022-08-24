@@ -7,6 +7,12 @@
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "node server/server.js",
     "server": "cd server && npm run server",
+    "build:client": "cd client && npm i && npm run build",
+    "build:server": "cd server && npm i",
+    "build": "npm run build:client && npm run build:server",
+    "install:client": "cd client && npm i",
+    "install:root": "npm i",
+    "install": "npm run install:client && npm run install:root",
     "client": ""
   },
   "keywords": [],
