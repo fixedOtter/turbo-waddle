@@ -34,11 +34,10 @@ export const getDb = async () => {
   const store = tx.objectStore('turboWaddle');
 
   // actual request getting everything from the database
-  const data = store.getAll();
+  const data = store.getAll().values;
 
-  // awaiting data and returning data or null
-  const result = await data;
-  return result ? result : null;
+  // awaiting data and returning
+  return await data;
 };
 
 initdb();
