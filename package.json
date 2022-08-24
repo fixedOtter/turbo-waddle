@@ -9,7 +9,7 @@
     "server": "cd server && npm run server",
     "build:client": "cd client && npm i && npm run build",
     "build:server": "cd server && npm i",
-    "build": "npm build:client && npm build:server",
+    "build": "npm run build:client && npm run build:server",
     "install": "npm build:server && cd client && npm i",
     "client": ""
   },
